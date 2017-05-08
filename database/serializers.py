@@ -14,4 +14,4 @@ class GliaCounselorSerializer(serializers.ModelSerializer):
 class GliaConversationSerializer(serializers.ModelSerializer):
     class Meta:
         model = GliaConversation
-        fields = ('id','conversationID','conversationTitle','counselorName')
+        fields = ('id','conversationID','conversationTitle','counselorID')

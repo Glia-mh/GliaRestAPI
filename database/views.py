@@ -2,7 +2,8 @@ from django.shortcuts import render
 from rest_framework import generics
 from database.models import GliaUser, GliaCounselor, GliaConversation
 from database.serializers import GliaUserSerializer, GliaCounselorSerializer, GliaConversationSerializer
-
+from rest_framework.views import APIView
+from rest_framework.response import Response
 # Create your views here.
 
 # ----------- USER VIEWS ------------------- #
@@ -37,3 +38,13 @@ class ConversationDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = GliaConversation.objects.all()
     lookup_field = 'conversationID'
     serializer_class = GliaConversationSerializer
+
+
+# -------------- Summarizer Endpoints ----------- #
+class Statistics(APIView):
+
+    def get(self, request, format=None):
+        user_count = GliaUser.objects.count()
+        conversation_count = GliaConversation.objects.count()
+        data = {'userCount':user_count, 'conversationCount': conversation_count }
+        return Response(data)
