@@ -27,7 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'glia-env.y5rqrbpijs.us-west-2.elasticbeanstalk.com',
-   
     '127.0.0.1',
 ]
 
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'database.apps.DatabaseConfig',
-     'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +130,3 @@ STATIC_ROOT = 'static'
 
 
 # CORS handling 
-
-CORS_ORIGIN_WHITELIST = [
-    'localhost:3000',
-]
