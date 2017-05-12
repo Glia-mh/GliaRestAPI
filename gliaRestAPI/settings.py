@@ -23,12 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_lbwiso!vvcl+ng6*!1)^ogubz&w_2usv=)v7&18-gn2#e6$^4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'glia-env.y5rqrbpijs.us-west-2.elasticbeanstalk.com',
-    'localhost:8081',
-    '127.0.0.1',
 ]
 
 
