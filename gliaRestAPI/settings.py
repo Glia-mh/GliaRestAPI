@@ -131,6 +131,7 @@ STATIC_ROOT = 'static'
 
 # CORS handling 
 
-CORS_ORIGIN_WHITELIST = (
-    'http://glia-counselor.surge.sh',
+CORS_ORIGIN_REGEX_WHITELIST = (
+    r'^http://glia-counselor.surge.sh/select/[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}',
+
 )
