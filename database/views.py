@@ -25,6 +25,7 @@ class CounselorList(generics.ListCreateAPIView):
 
 class CounselorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = GliaCounselor.objects.all()
+    lookup_field='counselorID'
     serializer_class = GliaCounselorSerializer
 
 

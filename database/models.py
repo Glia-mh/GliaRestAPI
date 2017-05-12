@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 # Create your models here.
 
@@ -16,6 +17,7 @@ class GliaUser(models.Model):
 class GliaCounselor(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
+    counselorID = models.UUIDField(editable=False, default=uuid.uuid4)
     counselorName = models.CharField(max_length=100)
     counselorBio = models.TextField() # Should be a description for a counselor 
     counselorImageURL = models.CharField(max_length=200)

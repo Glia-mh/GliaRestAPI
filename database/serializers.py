@@ -9,7 +9,7 @@ class GliaUserSerializer(serializers.ModelSerializer):
 class GliaCounselorSerializer(serializers.ModelSerializer):
     class Meta:
         model = GliaCounselor
-        fields = ('id','counselorName','counselorBio','counselorImageURL')
+        fields = ('id','counselorID', 'counselorName','counselorBio','counselorImageURL')
 
 class GliaConversationSerializer(serializers.ModelSerializer):
     class Meta:
