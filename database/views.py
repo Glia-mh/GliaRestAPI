@@ -32,7 +32,7 @@ class CounselorDetail(generics.RetrieveUpdateDestroyAPIView):
 # -------------- CONVERSATION VIEWS ------------ #
 class ConversationList(generics.ListCreateAPIView):
     queryset = GliaConversation.objects.all()
-    serializer_class = GliaCounselorSerializer
+    serializer_class = GliaConversationSerializer
 
 class ConversationDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = GliaConversation.objects.all()
