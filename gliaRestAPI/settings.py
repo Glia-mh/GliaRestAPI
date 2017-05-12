@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'glia-env.y5rqrbpijs.us-west-2.elasticbeanstalk.com',
-    'localhost',
+   
+    '127.0.0.1',
 ]
 
 
