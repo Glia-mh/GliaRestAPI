@@ -30,7 +30,7 @@ class GliaConversation(models.Model):
      created = models.DateTimeField(auto_now_add=True) # just ensures ordered by creation
      conversationID = models.IntegerField() # Sequentially order 1 .... n 
      conversationTitle = models.CharField(max_length=200) 
-     counselorID = models.IntegerField() # reference to GliaCounselor
+     counselorID = models.CharField(max_length=100) # reference to GliaCounselor
 
      class Meta: 
          ordering = ('created',)
