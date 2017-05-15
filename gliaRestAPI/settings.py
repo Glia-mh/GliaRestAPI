@@ -133,6 +133,6 @@ STATIC_ROOT = 'static'
 
 CORS_ORIGIN_WHITELIST = (
     'glia-counselor.surge.sh',
-    'localhost',
+    'localhost:3000',
 
 )
