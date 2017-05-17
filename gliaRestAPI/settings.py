@@ -136,3 +136,12 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
 
 )
+
+
+# Security
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'database.authentication.GliaAuthentication',
+    ),
+}

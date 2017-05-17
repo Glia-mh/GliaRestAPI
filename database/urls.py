@@ -16,4 +16,7 @@ urlpatterns = [
 
     # ---- statistics endpoints ---- #
     url('^statistics/$', views.Statistics.as_view()),
+
+    # --- authentication endpoints --- #
+    
 ]
