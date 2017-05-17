@@ -140,8 +140,3 @@ CORS_ORIGIN_WHITELIST = (
 
 # Security
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'database.authentication.GliaAuthentication',
-    ),
-}
