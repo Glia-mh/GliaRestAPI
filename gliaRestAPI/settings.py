@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_lbwiso!vvcl+ng6*!1)^ogubz&w_2usv=)v7&18-gn2#e6$^4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'glia-env.y5rqrbpijs.us-west-2.elasticbeanstalk.com',
+    '6737ba32.ngrok.io',
     '127.0.0.1',
 ]
 
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'database.apps.DatabaseConfig',
     'corsheaders',
+    'rest_framework.authtoken',
+
+   
 ]
 
 MIDDLEWARE = [
@@ -139,4 +142,11 @@ CORS_ORIGIN_WHITELIST = (
 
 
 # Security
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
