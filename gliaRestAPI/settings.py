@@ -26,7 +26,7 @@ SECRET_KEY = '_lbwiso!vvcl+ng6*!1)^ogubz&w_2usv=)v7&18-gn2#e6$^4'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '6737ba32.ngrok.io',
+    'glia-env.y5rqrbpijs.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
 ]
 
